@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-class ARP {
+class RARP {
     public static void main(String args[]) {
         try {
             Process p = Runtime.getRuntime().exec("arp -a");
@@ -11,7 +11,7 @@ class ARP {
                 str1 += str + "\n";
             StringTokenizer st = new StringTokenizer(str1, "\n");
             BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Enter the IP ADDRESS");
+            System.out.println("Enter the physical 48-bit ADDR ENTER THE PHYSICAL 48BIT ADDRESS ");
             st2 = br1.readLine();
             while (st.hasMoreTokens()) {
                 st1 = st.nextToken();
@@ -23,3 +23,16 @@ class ARP {
         }
     }
 }
+
+
+// SIMPLE :
+// enter the MAC ADDRESS
+// Press enter
+// IP address will be printed 
+
+// Note :
+// if you are not able to figure out your MAC address then open CMD type "arp -a" you will get a list of IPs and their corresponding MAC address
+// Enter one of the MAC address from that
+// Corresponding IP address will be printed in the console
+
+// PC : What I have said in the "Note" is the exact thing the above CODE does 😂
